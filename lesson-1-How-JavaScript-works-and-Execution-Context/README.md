@@ -12,7 +12,7 @@
     - The code is executed one line at a time here
     -  Also known as **“thread of execution”**
 
-<img width="400px" src="images/execution-context.png"/>
+    <img width="400px" src="images/execution-context.png"/>
 
 ## “Is JavaScript Synchronous or Asynchronous ?”
 - Synchronous programming means that if execution of any command is halted or waiting, then JS won't jump onto the next command. It will wait for the current command and then move forward. Until then all processes are halted.
