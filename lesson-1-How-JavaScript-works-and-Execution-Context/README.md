@@ -10,7 +10,8 @@
     - Also known as **“variable environment”**
 - Component 2 : Code 
     - The code is executed one line at a time here
-    -  Also known as **“thread of execution”**
+    -  Also known as **“thread of execution”** <br/><br/>
+
 
     <img width="400px" src="images/execution-context.png"/>
 
