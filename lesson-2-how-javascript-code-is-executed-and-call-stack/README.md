@@ -2,11 +2,13 @@
 ## “What happens when you run JavaScript Code?”
 ### “Everything in JavaScript happens inside an Execution Context”
 - *Whenever we have to  execute a program, an execution context is created*
+- let us take a code snippet to understand how exactly does JavaScript work in the backstage
+
+	<img width=300px height=200px src="images/code.png" />
+	
 - Execution context contains two phases, namely :
 	- **Phase I: Memory allocation phase** 
 		- JavaScript allocates memory to all variables and functions in memory component.
-		- let us take a code snippet to understand how exactly does JavaScript work in the backstage
-		<img>
 		- In the given example, JavaScript scans the code line by line and allocates memory. On the first line it encounters variable `n` and on the next line function `square`.
 		- As it allocates memory for both, in the case of variables it stores the value as `undefined` and in the case of functions it literally stores the whole function code block.
 		- Similarly, it allocates memory for variables `square2` and `square4` with value as `undefined` respectively.
@@ -52,7 +54,7 @@
 - **“Call Stack maintains the order of execution of the execution contexts”**
 - In order to maintain the order of execution of the execution contexts and efficiently perform creation and deletion of the execution contexts JavaScript uses **Call Stack**
 
-  <img height=200px src="images/callstack.png"/>
+  <img width=150px height=200px src="images/callstack.png"/>
 
 - Call Stack is also called as:
     - Execution Context Stack
@@ -64,28 +66,29 @@
 - The newly created execution context is placed at the top of the stack and once the execution is completed, it is popped from the stack
 - In the given example,the global execution context is at the base of the stack 
 
-    <img height=200px src="images/global_in_callstack.png"/>
+    <img width=350px height=200px src="images/global_in_callstack.png"/>
 - On line number 6 when the square function is invoked, an execution context (E1) is created and placed on the top of the global execution context.
 
-    <img height=200px src="images/E1-before-adding.png"/>
-    <img height=200px src="images/E1-added.png"/>
+    <img width=350px height=200px src="images/E1-before-adding.png"/>
+    <img width=350px height=200px src="images/E1-added.png"/>
 - Once it’s execution is completed, it is removed from the top of the stack and the control returns back to the global execution context
 
-    <img height=200px src="images/E1-before-popping.png"/>
-    <img height=200px src="images/E1-popped.png"/>
+    <img width=350px height=200px src="images/E1-before-popping.png"/>
+    <img width=350px height=200px src="images/E1-popped.png"/>
 
 - Then on line number 7, square function is invoked again so execution context (E2) is created and placed on the top of the stack.
-    <img height=200px src="images/E2-before-adding.png"/>
-    <img height=200px src="images/E2 added.png"/>
+
+    <img width=350px height=200px src="images/E2-before-adding.png"/>
+    <img width=350px height=200px src="images/E2 added.png"/>
 
 
 - Once it’s execution is completed it is popped from the stack and the control moves back to the global execution context
 
-    <img height=200px src="images/E2-popped.png"/>
+    <img width=150px height=200px src="images/E2-popped.png"/>
 
 - Once the program is executed completely, global execution context is also popped from the stack and the call stack becomes empty.
 
-    <img height=200px src="images/gec-deleted.png"/>
+    <img width=150px height=200px src="images/gec-deleted.png"/>
 
 
 
