@@ -1,18 +1,18 @@
 # Lesson 3 : Hoisting in JavaScript
 To begin, let’s look at some Javascript code and it’s output
 
-- <figcaption>Code</figcaption>
+- <figcaption>Code</figcaption><br />
   <img src="images/code1.png" width=300px/>
   
-- <figcaption>Output</figcaption>
+- <figcaption>Output</figcaption><br />
   <img src="images/code1-output.png" width=300px/>
 
 - In the code snippet, we have just initialised a variable `x` and the function `getName()`. Here, we are invoking the function and printing the value of the variable
 - The output is very obvious and can be easily understood. Now let's look at the same example again, but this time with a twist.
 
-- <figcaption>Code</figcaption>
+- <figcaption>Code</figcaption><br />
   <img src="images/code2.png" width=300px/>
-- <figcaption>Output</figcaption>
+- <figcaption>Output</figcaption><br />
   <img src="images/code2-output.png" width=300px/>
 
 - In this example, we are trying to access the function `getName()` and the variable `x` even before they have been initialised.
@@ -25,14 +25,14 @@ To begin, let’s look at some Javascript code and it’s output
 
 - Let’s see what happens when we console log a function
 
-- <figcaption>Code</figcaption>
+- <figcaption>Code</figcaption><br />
     <img src="images/code3.png" width=300px/>
-- <figcaption>Output</figcaption>
+- <figcaption>Output</figcaption><br />
     <img src="images/code3-output.png" width=300px/>
 - As we can see from the output, it prints the function itself. But what if we try to console log this function even before it has been initialised?
-- <figcaption>Code</figcaption>
+- <figcaption>Code</figcaption><br />
     <img src="images/code4.png" width=300px/>
-- <figcaption>Output</figcaption>
+- <figcaption>Output</figcaption><br />
     <img src="images/code4-output.png" width=300px/>
 - Earlier when we tried console logging the variable `x` before initialising, it was giving the output as “u`defined” `but when we did the same with the function` getName(`), we can see that JavaScript was able to access the function and print it’s output. 
 - To have a better understanding of what’s happening and why the program is behaving this way, we need to recollect the concept of *“execution context”*.
