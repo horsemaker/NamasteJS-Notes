@@ -58,10 +58,10 @@ To begin, let’s look at some Javascript code and it’s output
 ### Difference between undefined and not defined
 
 Let us see one more variation of the same code
-- <figcaption>Code</figcaption>
+- <figcaption>Code</figcaption><br />
 
    <img src="images/code6.png" width=300px/>
- - <figcaption>Output</figcaption>
+ - <figcaption>Output</figcaption><br />
     <img src="images/code6-output.png" width=300px/>
 
 - Here when we debug from the first line, the memory gets allocated only to the functio `getName()`n and there is no reserved memory for the variable` `x as it has not been defined in the code
@@ -88,9 +88,9 @@ Let us see one more variation of the same code
 
 - Why does it say that it is not a function? 
     - The reason, when we declare it in this way, like an arrow function, it behaves like a variable. 
-    - Thus, as we learned that in the execution context's memory allocation phase, the variables are allocated the value as undefined. Similarly, getName() also gets value allocated as undefined.
+    - Thus, as we learned that in the execution context's memory allocation phase, the variables are allocated the value as `undefined`. Similarly, `getName()` also gets value allocated as `undefined`.
 
-- Now, we will declare another function named getName2() as a statement. let us observe how it gets allocated in the scope.
+- Now, we will declare another function named `getName2()` as a statement. let us observe how it gets allocated in the scope.
     <br /><img src="images/img3.png"  width=300px height=230px>
     <br /><img src="images/img4.png"  width=300px height=200px>
  
@@ -102,7 +102,7 @@ Let us see one more variation of the same code
 
 
 
-- Also, In this case, similar to arrow functions, the function getName2 would be treated as a variable and, the value allocated will be undefined.
+- Also, In this case, similar to arrow functions, the function `getName2()` would be treated as a variable and, the value allocated will be `undefined`.
 
 - Thus, in this way, we can even access the variables and the functions even before they are initialized
 
@@ -120,11 +120,15 @@ Let us see one more variation of the same code
 - Let's keep a debugger on line 8, we know that, whenever we come across a function invocation, a brand new execution context is created and it is pushed onto the call stack.
     <br /><img src="images/img9.png" width=300px height=200px>
 
-- We’ll keep the debugger on line 5 now, as the function was invoked the control shifts to line 5, and the brand new global execution context getName is also created and visible in the call stack.
+- We’ll keep the debugger on line 5 now, as the function was invoked the control shifts to line 5, and the brand new global execution context `getName()` is also created and visible in the call stack.
     <br /><img src="images/img10.png" width=300px height=200px>    
 
-- Keeping a debugger on line 9, in the previous step, we saw that the control was on line 5 which means, the function getName will be executed. Once the function getName gets executed, its execution context will be deleted, or for our understanding, we can say it gets popped off from the call stack.
+- Keeping a debugger on line 9, in the previous step, we saw that the control was on line 5 which means, the function `getName()` will be executed. Once the function  `getName()` gets executed, its execution context will be deleted, or for our understanding, we can say it gets popped off from the call stack.
     <br /><img src="images/img11.png" width=300px height=200px>
 
 
 - The function is executed, successfully. The call stack's local execution context was popped. Line 9 returns the control to the global execution context.
+
+
+- Resources
+  - [Hoisting in JavaScript (variables & functions)](https://www.youtube.com/watch?v=Fnlnw8uY6jo&list=PLlasXeu85E9cQ32gLCvAvr9vNaUccPVNP&index=4&t=2s)
