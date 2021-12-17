@@ -7,33 +7,43 @@
 - Let us run this code snippet and check out for our queries
 
     <img src="images/img1.png">
+
     - output
     <img src="images/img2.png">
 - So this is the output we got 
 - Let us dive into behind the scenes
 - As we know, whenever JavaScript runs a code, a global execution context is created.
 - Again we know, there will be two components, memory which is also known as **variable environment** and the code component.
+
     <img src="images/img3.png">
 - So now in the first phase, JavaScript will allocate the memory to the variable `x` and functions `a()` and `b()`
 - As previously we have learnt that, the variables get allocated a special keyword `undefined` and the functions will be stored as it is.
+
     <img src="images/img4.png">
 - Also we have learnt about **Call Stack** right? **Call Stack** is a stack where all the execution contexts are stored. As soon as our global execution context was created, it got pushed onto the **Call Stack**. 
+
     <img src="images/img5.png">
 - Now, when we run the first line `var x=1;`, variable `x`’s value in the memory component whose value was allocated as `undefined` would be replace by value `1`
+
     <img src="images/img6.png">
 - Moving onto next line, there’s a **function invocation** for function `a()`, again a local execution context is created along with its two components - memory allocation and code execution
 - This newly created execution context is pushed onto **Call Stack**
+
     <img src="images/img7.png">
 - And the control is given to line 7
+
     <img src="images/img8.png">
 - Now, this brand new execution context will be limited to the function `a()` only.
+
     <img src="images/img9.png">
 - Within the function `a()`, all the variables will get allocated within the memory component of local execution context.
 - The newly created local execution context is independent of anything and acts as a separate entity.
 - Variable `x` won't create confusion with the global scope variable as this variable within the function block will be treated as a new, different element.
 - About the control, for global execution context, the control is on line 2 as the function was invoked on line 2 and for the local execution context for function `a()` the control is on line 7.
+
     <img src="images/img10.png">
 - As it executes line 7, the variable `x` is updated with new value as 10
+
    <br> <img src="images/img11.png">
 - For next line, console.log statement, JavaScript looks for the value of `x` in the local memory, thus, proving its limitation to that context.
      <br><img src="images/img12.png">
