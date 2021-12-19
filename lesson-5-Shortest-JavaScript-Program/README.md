@@ -35,22 +35,22 @@ Yes, it is the *“EMPTY FILE”*
 - What is **Global Space** ?
     - Any part of code which is not a part of any function is the **Global Space**.
 - Let us understand this with the help help of an example
-    <img src="images/img1.png">
+    - <img src="images/img1.PNG">
 - Here, variable `a` and function `b()` are not a part of any function. Thus, they are in the **Global Space**.
 - But, variable `x`, being a part of function `b()`, is not in **Global Space**.
 
 - Whenever we declare any variable or function in the **Global Space**, it gets attached to the global object `window`.
-    <img src="images/img2.png">
+    - <img src="images/img2.PNG" width=350px>
 - Variable `x` is not present, as it's not in **Global Space**
 
 - How to access variables and functions of **Global Space**?
     - As `window` is an object and all the variable and functions attached to it are like its attribute, we can access them by using dot operator
-    - <img src="images/img3.png">
+    - <img src="images/img3.PNG">
     - Or else we can simply access it by name
-    - <img src="images/img4.png">
+    - <img src="images/img4.PNG">
     - Even if we don't mention the object name as `window`, JavaScript assumes that the variable is in **Global Space**
     - Now, if we try to access variable `x` in similar fashion, it gives an error, because it's not a part of **Global Space**
-    - <img src="images/img5.png">
+    - <img src="images/img5.PNG">
 
 ### Resources
 - [SHORTEST JS Program window & this keyword](https://www.youtube.com/watch?v=QCRpVw2KXf8&list=PLlasXeu85E9cQ32gLCvAvr9vNaUccPVNP&index=8)
