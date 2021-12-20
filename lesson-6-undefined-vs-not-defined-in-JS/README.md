@@ -37,8 +37,7 @@
 
  
 ### Never make this mistake..
-<br><img src="images/code2.png" width=200px> 
-
+<img src="images/code2.png" width=200px><br> 
 - Although `undefined` is a JavaScript keyword and it is possible to assign it as a value to a variable but it leads to a lot of inconsistencies
 - Previously we have learnt that `undefined` gets assigned to a variable when no value was assigned to the variable throughout the program
 - `undefined` has its own special purpose hence, it is a bad practice to assign it as a value to a variable
