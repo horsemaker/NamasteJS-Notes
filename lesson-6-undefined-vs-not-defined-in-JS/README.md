@@ -2,26 +2,26 @@
 ## Introduction to undefined in JavaScript 
 - Previously we learnt that JavaScript creates a Global Execution Context and allocates memory to the variables and functions even before the code is executed, here comes the special keyword `undefined` into picture.
 - Let’s say that we defined a variable `a` as value 7
-<br><img src="images/img1.png">
+<br><img src="images/img1.PNG">
 - JavaScript allocates memory to the variable `a` even before the code is executed.
 - Let's put a debugger on line 1
-<br><img src="images/img2.png">
+<br><img src="images/img2.PNG">
 - Lets refresh the page, we have not executed the code yet, but still javascript has allocated the memory for `a` as `undefined`
-<br><img src="images/img3.png">
+<br><img src="images/img3.PNG">
 - If we try to access `a` in the console, it gives the value as `undefined`
-<br><img src="images/img4.png">
+<br><img src="images/img4.PNG">
 - We can say that the special keyword `undefined` is a placeholder for any variable before it is initialized with any value after we start executing.
 - But if we try to access any other variable, let’s say `x`, **which is not declared in the code**, will give an error as **the variable is not defined**. This happened because as we did not **declare** the variable `x` in the code, javascript also did not allocate the memory for variable `x` in the execution context. Thus, while accessing, javascript could not find the variable and gave out an error saying **it is not defined**
-<br><img src="images/img5.png">
+<br><img src="images/img5.PNG">
 - So now when we run this snippet,
-<br><img src="images/img6.png">
+<br><img src="images/img6.PNG">
 - We get the output as
-<br><img src="images/img7.png">
+<br><img src="images/img7.PNG">
 - Hence, this is the difference between `undefined` and **not defined**
 - Now, let's check what will be the output in the console before and after initializing the variable `a` 
-<br><img src="images/img8.png">
+<br><img src="images/img8.PNG">
 - For the first console statement, it gives value as `undefined` as we know that in global execution context’s first phase, it allocates memory with the value `undefined`, but for the second statement, just before the console statement, the variable `a` has been initialized as value 7. Thus, for the second console statement the value `7`will be printed.
-<br><img src="images/img9.png">
+<br><img src="images/img9.PNG">
 - The keyword `undefined` doesn't mean that the variable is empty. It acts as a placeholder for the time being, until we run the code and it gets initialized with a value.
 
 
