@@ -71,7 +71,7 @@ It won’t be able to find `b` in the local memory as it is not present then it 
 
 - Let us understand how do we use this lexical environment in JavaScript<br>
     - <img src="images/img1.PNG" width=400px><br>
-- suppose we try to print `b` within the function `c()`. As javascript encounters this console statement it will first search for the variable `b` within the local memory of function `c()` <br>
+- suppose we try to print `b` within the function `c()`. As JavaScript encounters this console statement it will first search for the variable `b` within the local memory of function `c()` <br>
     - <img src="images/img2.PNG" width=300px><br>
 - It wont find `b` as the variable is not declared in the function `c()` 
 - So now it will take the reference and go onto the lexical environment of its parent, function `a()`<br>
@@ -85,17 +85,18 @@ It won’t be able to find `b` in the local memory as it is not present then it 
 - But what if the variable is not present in the global memory also ? It will again take the reference but now the reference points to null. It means that the variable was never declared in the code.
 - Thus, it will give an error saying that 
 **variable `b` is not defined**
+
 ### The Scope Chain
-- This mechanism of finding a variable, like first, `b` was searched in local memory of `c()` then took the reference of lexical environment of `a()` and searched in local memory of `a()` because a() is the lexical parent of `c()` and if suppose the variable is absent in a(), then it will search function `a()`’s parent i.e the global context, if not found then again take the reference of lexical environment of parent but in case of global execution context reference, for the parent it refers to ‘null’, *if not found then searching in its parent, then its parents n so on* is called as **scope chain**<br>
+- This mechanism of finding a variable, like first, `b` was searched in local memory of `c()` then took the reference of lexical environment of `a()` and searched in local memory of `a()` because a() is the lexical parent of `c()` and if suppose the variable is absent in a(), then it will search function `a()`’s parent i.e the global context, if not found then again take the reference of lexical environment of parent but in case of global execution context reference, for the parent it refers to ‘null’, *if not found then searching in its parent, then its parents and so on* is called as **Scope Chain**<br>
     - <img src="images/img6.PNG" width=300px><br>
 - Chain of all these lexical environment and parent references is known as **Scope Chain**
-- It defines whether the variable sits inside the code, if the scope chain gets exhausted while searching it means the variable is not defined in the code 
+- It defines whether the variable sits inside the code, if the **Scope Chain** gets exhausted while searching it means the variable is not defined in the code 
 - Let us see this visualization within the browser
 - Let’s keep a debugger on line 5<br>
     - <img src="images/img7.PNG" width=300px><br>
-- As we run this code we can see that in the call stack, all three execution context is present as we discussed it visually<br>
+- As we run this code we can see that in the **Call Stack**, all three execution context is present as we discussed it visually<br>
     - <img src="images/img8.PNG" width=300px><br>
-- Here, `(anonymous)` relates to global execution context;If we click on function `a` in the call stack, it shows local memory of function `a()` and its lexical environment of parent i.e global<br>
+- Here, `(anonymous)` relates to global execution context;If we click on function `a` in the **Call Stack**, it shows local memory of function `a()` and its lexical environment of parent i.e global<br>
     - <img src="images/img9.PNG" width=300px><br>
 - Similarly, when we check for function `c`, it shows the lexical environment of parent function `a()` and lexical of environment of function `a()`’s parent, global
 - So, practically function `c()` has access to all the variables throughout the code.<br>
