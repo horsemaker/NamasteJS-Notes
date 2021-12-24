@@ -1,6 +1,68 @@
 # Lesson 8: let & const in JS - The temporal dead zone
+- We have learnt about **Hoisting** right? But we have seen examples of `var` declarations, what about `let` and `const` declarations? Aren't they hoisted?
+- Yes, `let` and `const` declarations are hoisted but they are hoisted in a different way as compared to `var` declarations
+- We can say that these are in the *temporal dead zone* for the time being.
+- Let us understand this concept with the help of an example	
+- <img src="images/img1.PNG" >
 
-### SyntaxError vs ReferenceError vs TypeError
+- In this example, as we’ve previously studied, `var` declarations can be accessed even before it is initialized, why?, because the variable was hoisted and if we try to access then it will give us the special placeholder `undefined`, like this
+- <img src="images/img2.PNG" >
+
+- Now, as per the presumption, `a` would also be hoisted
+So if we access it before the initialization then it should also give us undefined. Let’s check for `a`.
+- <img src="images/img3.PNG" >
+
+- But we got this error, this error tells us that we can access **only after we have initialized with a value**
+- Let us understand more deeply by exploring into the browser
+- <img src="images/img4.PNG" >
+
+
+- Here, we’ve kept the debugger on the very first line i.e even before executing a single line of code
+As we run line 1,
+- <img src="images/img5.PNG" >
+
+- We can see that, JavaScript has allocated memory for `a` as well as `b`, so both are there in the scope and values for these are `undefined`
+In case of `var b`, it is allocated in the **Global Space** but in the case of `let a`, `a` is allocated under something new called *Script*.
+- Why did this happen? 
+  - In the case of `var b` it is allocated in the **global space**. means it is attached to the global object
+  - But for `let a` it is also hoisted but they are stored in a different memory. Thus, we cannot access `a` before it has been initialized or assigned any value.
+- Let us execute the code line by line and understand behind the scenes
+- <img src="images/img6.PNG" >
+
+- Here, the line no 2 was executed and the value 10 was assigned to `a` 
+And now if we run line no 3, it will print the value 10
+- <img src="images/img7.PNG" >
+
+
+### What is a temporal dead zone?
+- It is the time since when the let variable is hoisted, till it gets initialized with a value 
+- <img src="images/img8.PNG" >
+
+- Let us use this example, we have kept the debugger on line no 1, yet to execute the code
+- So in this stage, `a` is hoisted in a separate space.
+- The time period from this stage till the execution  reaches line no 3 and assigns the value to `a` is called as **temporal dead zone**
+- Now if we run the first line, it will give us an *ReferenceError*
+- So whenever we try to access an element which is in the **temporal dead zone** it will give us a **ReferenceError**
+- <img src="images/img9.PNG" >
+
+- But if we access a random variable which is not there in the code, for example let’s print the variable `x` 
+- <img src="images/img10.PNG">
+
+- <img src="images/img11.PNG">
+
+- It gives us a **ReferenceError** saying that the random variable `x` wasn’t declared before, **is not defined**, as it was not defined, JavaScript couldn’t find its reference.
+- Hence, it throws a **ReferenceError** 
+- Now in case of `let a` the **ReferenceError** we got gives us a different message, it clearly states that we cannot access it before its initialization and it is in its **temporal dead zone**
+
+### Relation of global object and variables var, let & const
+
+- As we have previously learnt that `var` declarations are attached to the global object `window`, so we can access these `var` declarations using dot operator 
+- <img src="images/img12.PNG" >
+
+- But remember, Variable `b` was allocated within the global space and variable `a` was allocated in a separate space ? So if we try to access `a` in this similar fashion then it will give us value `undefined`, as it isn’t present in the global space
+- <img src="images/img13.PNG" >
+
+## SyntaxError vs ReferenceError vs TypeError
 
 ### SyntaxError
 - A syntax error is the incorrect use of the predefined syntax
