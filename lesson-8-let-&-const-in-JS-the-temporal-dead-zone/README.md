@@ -1,0 +1,1 @@
+# Lesson 8: let & const in JS - The temporal dead zone
