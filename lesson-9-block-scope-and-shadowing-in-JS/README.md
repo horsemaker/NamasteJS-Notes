@@ -18,7 +18,7 @@
 - To understand this let us declare the variables in `var` `let` and `const` and observe how they behave within the block and what happens behind the scene.
     - <img src="images/img4.PNG">
 - So here we have declared `var a`, `let b` and `const c`, moving onto the browser, let us keep a debugger on line 2
-    - <img src="images/img5.PNG">
+    - <img src="images/img5.PNG" width=350px>
 - As we see, both `let` and `const` declarations are hoisted in *Block Scope* with value as `undefined`, this a separate space that is **reserved for this block only**.
 - Thus,  we say that `let` and `const` are **Block Scoped** and they cant be accessed outside the block whereas, `var` declarations are accessible anywhere in the code.
 - Let us again take an example to understand.
@@ -28,7 +28,7 @@
 - JavaScript prints the value of all three variables when it executes the console statements which are present within the block but when it executes the console statements present outside the block then only `var` declaration `a`’s value is printed for `let` and `const` declaration it throws an error saying those variables are not defined
 - For `var` declaration it is understood that it is globally scoped so it was accessible but what happened `let` and `const` declarations
 - Let us check the browser, keeping debugger on line 10,
-    - <img src="images/img8.PNG">
+    - <img src="images/img8.PNG" width=350px>
 - Here we see that, as soon as the block was executed, it is no longer present in the scope and only Global Scope remains 
 - Thus, only the `var` declaration was accessible.
  
@@ -41,11 +41,11 @@
 - Here, the variable `a` inside the block scope is shadowing the variable `a` outside the block scope
 - On executing the above code, we get the output as
 <br><img src="images/output0.png">
-- In this case, the value of variable `a` in the global scope was modified to 10 because `a` inside the block scope and outside of it, is pointing to the same memory space i.e Global
-<br><img src="images/debug2.png">
+- In this case, the value of variable `a` in the global scope was modified to 10 because `a` inside the block scope and outside of it, is pointing to the same memory location i.e Global
+<br><img src="images/debug2.png" width=350px>
 - As we can see, `a` is present in the global scope, and before executing line number 3, its value is 100
 On executing line number 3, its value changes to 10
-<br><img src="images/debug3.png">
+<br><img src="images/debug3.png" width=350px>
 
 Let’s see what happens when we do the same thing with `let`
 <br><img src="images/code1.png">
@@ -53,7 +53,7 @@ Let’s see what happens when we do the same thing with `let`
 <br><img src="images/output1.png">
 - Here, when `b` is logged inside the block scope, its value is 20 but when it is logged outside the block scope i.e inside the global scope, its value is 100
 - Let’s debug and see why this happened 
-<br><img src="images/debug1.png">
+<br><img src="images/debug1.png" width=350px>
 - By keeping the debugger on line number 6, when we execute the code we see that we have three different scopes
 - Here, we have the block scope where the `let` and `const` variables present inside this scope are hoisted
 - Then we have the Script scope here, where the `let` and `const` variables present inside the global scope are hoisted. We have already learned that `let` and `const` are maintained in a separate memory space
@@ -69,6 +69,7 @@ Let’s see what happens when we do the same thing with `let`
 <br><img src="images/code3.png">
 - Output
 <br><img src="images/output3.png">
+ 
  ### What is illegal shadowing?
  Let’s see an example of *illegal shadowing*
 <br><img src="images/code4.png">
@@ -76,7 +77,7 @@ Let’s see what happens when we do the same thing with `let`
 <br><img src="images/output4.png">
 - It throws a error, so this counts as illegal shadowing 
 - Shadowing `let` using `let` is allowed but shadowing `let` using `var` is not allowed
-But can we shadow a `var` using `let`? Let’s check
+- But can we shadow a `var` using `let`? Let’s check
 <br><img src="images/code5.png">
 - Output:
 <br><img src="images/output5.png">
@@ -94,7 +95,7 @@ Why does this happen?
 - Hence, we get the output as
 <br><img src="images/output7.png">
 - Let’s debug and check the memory scope
-<br><img src="images/debug4.png">
+<br><img src="images/debug4.png" width=350px>
 - Here, we can see that there is different memory space for each block
 <br><img src="images/code8.png">
 - In the above code snippet, if we try to log the value of `a` we get the output as
