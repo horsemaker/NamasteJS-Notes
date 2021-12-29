@@ -16,7 +16,7 @@
     - Because that is exactly what a CLOSURE is!
 
     - Let's dive deep into the browser to learn more about *closures*
-    - <img src="images/debug1.png">
+    - <img src="images/debug1.png" width=300px>
     - By keeping a debugger on line number 4 when we execute the code, we see that there is `closure(x)` in the scope section
     - As we have held our program on function `y()`, so inside `y()` it forms a closure with the variables which were a part of the `x()` lexical scope
     - So the function `y()` has access to its parent’s lexical scope
@@ -70,9 +70,9 @@
 
 - It is trying to access its parent’s scope and also the parent’s parent scope
 - Let us keep the debugger on line 6
-- <img src="images/img4.PNG">
+- <img src="images/img4.PNG" width=300px>
 
-- Here we can see a **closure** present right? This means `y()` forms a closure along with the scope of x and scope of z
+- Here we can see a **closure** present right? This means `y()` forms a closure along with the scope of` x` and scope of `z`
 - We know that, **closure** is a *function along with its scope* and here it's also visible that function `y()` has formed closure with the scope of parent `x()` and parent’s parent `z()` 
 - If we would’ve returned the function `y()` somewhere outside then the variables `a` and `b` would’ve been retained and not garbage collected.
 - **Closure** is a very important part of the language with the help of this, functions remember the things even when they are not in the lexical scope
