@@ -130,5 +130,5 @@ In this lesson, we’ll go through a bunch of JS interview questions
         - <img src="images/img8.PNG"> 
     - But `z` is not present in the memory because it was garbage collected right after the execution of the function `b()`
         - <img src="images/img9.PNG"> 
-
-
+#### Resource
+- [CRAZY JS INTERVIEW ft. Closures | Namaste JavaScript Ep. 12](https://www.youtube.com/watch?v=t1nFAMws5FI&t=1644s)
