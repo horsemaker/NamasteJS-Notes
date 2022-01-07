@@ -82,7 +82,7 @@
         - <img src="images/img5.PNG">
 
     - We are getting the output as above lets keep a debugger on the console statement
-        - <img src="images/img6.PNG">
+        - <img src="images/img6.PNG" width=300px>
 
     - Here we can see that the callback function `xyz()` is present in the **call stack** and has access to the closure. And this closure has the location of `count`.
     - So whenever the event “click” takes place the callback function remembers the `count` and its value is incremented 
