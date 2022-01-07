@@ -39,18 +39,18 @@
 
 ### Let's dive deep into the browser to see what's happening with the call stack
 
- - <img src="images/debug1.png">
+ - <img src="images/debug1.png" width=300px>
 -  Here, we have kept a debugger on line number 4 and line number 12 
 -  On executing the code at this point, this is what happens
-- <img src="images/debug2.png">
+- <img src="images/debug2.png" width=300px>
 -  At first, the global execution context, execution context of function `x` and execution context of function `y` are pushed onto the call stack
- - <img src="images/debug3.png">
+ - <img src="images/debug3.png" width=300px>
 - Once, its execution is over all the three execution contexts are popped out from the call stack
- - <img src="images/debug4.png">
+ - <img src="images/debug4.png" width=300px>
 - After 5000ms (5s), `anonymous` shows up in the call stack automatically
- - <img src="images/debug5.png">
+ - <img src="images/debug5.png" width=300px>
 - By this time, we have “x” and “y” logged onto the console as function `x` has finished its execution
- - <img src="images/debug6.png">
+ - <img src="images/debug6.png" width=300px>
 - At this point the program was paused, so when we execute the program again, callback function gets executed and “timer” is logged onto the console
 -  Call Stack is also known as “main thread”
 - If any operation blocks this call stack, that is known as blocking the main thread
@@ -58,7 +58,7 @@
 - Since we have only one call stack, JavaScript will not execute any other code until it is done executing the function `x` which means that everything else will be blocked on the code
 - But it's never a good idea to block the main thread
 - We should always try to use async operations for the things which take time
-- Because of web API’s like `setTimeout` and callback functions, we can achieve asynchronous operations in JavaScript<br><br>
+- Because of Web API’s like `setTimeout` and callback functions, we can achieve asynchronous operations in JavaScript<br><br>
 
 ### Moving onto the event listeners
 - Let us go to the index.html where as of for now only “Namaste JavaScript” is printed
