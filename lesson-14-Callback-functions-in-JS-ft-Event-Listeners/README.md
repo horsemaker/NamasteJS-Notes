@@ -83,20 +83,20 @@
         - <img src="images/img5.PNG">
 
     - We are getting the output as above lets keep a debugger on the console statement
-        - <img src="images/img6.PNG">
+        - <img src="images/img6.PNG" width=300px>
 
     - Here we can see that the callback function `xyz()` is present in the **call stack** and has access to the closure. And this closure has the location of `count`.
     - So whenever the event “click” takes place the callback function remembers the `count` and its value is incremented 
     - Coming onto the **Element** tab, if we click on our button element, below in the console we can see that an **Event Listeners** tab is created. Here all the event listeners attached to the selected element will be displayed.
-        - <img src="images/img7.PNG">
+        - <img src="images/img7.PNG" width=300px>
 
     - Our *event* listener is been registered here, within the **click**, we have the element along with its *id* and there’s the description about this event listener and here we can check, the *handler* is our callback function `xyz()`
     - If we dive deeper into the *handler* option
-        - <img src="images/img8.PNG">
+        - <img src="images/img8.PNG" width=300px>
 
     - It shows us the scope of our callback function
     - And what is within its *Scope*? **Global Scope** and the *Closure*. **Closure** will be containing parent’s scope and its parent’s parent scope.
-        - <img src="images/img9.PNG">
+        - <img src="images/img9.PNG" width=300px>
 
 - One of the most important interview questions asked from this topic is “Why do we need to remove event listeners?”
 - Event listeners are actually *heavy* in the sense of memory.
