@@ -4,7 +4,7 @@
 - We already know that functions are first class citizens in JavaScript
 - Being first class citizens, we know that functions can be passed to another functions as arguments
 - When you do so, the function that is passed is called as a *Callback function*
-- *Callback functions* are very powerful in JavaScript. It gives the access to the asynchronous world in a synchronous single-threaded language
+- *Callback functions* are very powerful in JavaScript. They give the access to the asynchronous world in a synchronous single-threaded language
 - Recollect from our previous lessons,we've already seen that JavaScript is a synchronous single-threaded language which means that it can only do one thing at a time and in a specific order
 - But with the help of callback functions, we can do async operations inside JavaScript
 ### Wondering why it is called as a *"callback function"*?
