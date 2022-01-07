@@ -4,7 +4,7 @@
 - We already know that functions are first class citizens in JavaScript
 - Being first class citizens, we know that functions can be passed to another functions as arguments
 - When you do so, the function that is passed is called as a *Callback function*
-- *Callback functions* are very powerful in JavaScript. It gives the access to the asynchronous world in a synchronous single-threaded language
+- *Callback functions* are very powerful in JavaScript. They give the access to the asynchronous world in a synchronous single-threaded language
 - Recollect from our previous lessons,we've already seen that JavaScript is a synchronous single-threaded language which means that it can only do one thing at a time and in a specific order
 - But with the help of callback functions, we can do async operations inside JavaScript
 ### Wondering why it is called as a *"callback function"*?
@@ -22,6 +22,7 @@
     1. callback function
     2. time in milli seconds
 <br>
+
 - `setTimeout` will take that callback function and attach a timer of 5000ms to it and store it in a different space 
 -  We've seen in our previous lessons that JavaScript doesn't wait until `setTimeout` finishes its execution
 - In this case, as well JavaScript won't wait for the 5000ms timer to expire
@@ -38,18 +39,18 @@
 
 ### Let's dive deep into the browser to see what's happening with the call stack
 
- - <img src="images/debug1.png">
+ - <img src="images/debug1.png" width=300px>
 -  Here, we have kept a debugger on line number 4 and line number 12 
 -  On executing the code at this point, this is what happens
-- <img src="images/debug2.png">
+- <img src="images/debug2.png" width=300px>
 -  At first, the global execution context, execution context of function `x` and execution context of function `y` are pushed onto the call stack
- - <img src="images/debug3.png">
+ - <img src="images/debug3.png" width=300px>
 - Once, its execution is over all the three execution contexts are popped out from the call stack
- - <img src="images/debug4.png">
+ - <img src="images/debug4.png" width=300px>
 - After 5000ms (5s), `anonymous` shows up in the call stack automatically
- - <img src="images/debug5.png">
+ - <img src="images/debug5.png" width=300px>
 - By this time, we have “x” and “y” logged onto the console as function `x` has finished its execution
- - <img src="images/debug6.png">
+ - <img src="images/debug6.png" width=300px>
 - At this point the program was paused, so when we execute the program again, callback function gets executed and “timer” is logged onto the console
 -  Call Stack is also known as “main thread”
 - If any operation blocks this call stack, that is known as blocking the main thread
@@ -57,7 +58,7 @@
 - Since we have only one call stack, JavaScript will not execute any other code until it is done executing the function `x` which means that everything else will be blocked on the code
 - But it's never a good idea to block the main thread
 - We should always try to use async operations for the things which take time
-- Because of web API’s like `setTimeout` and callback functions, we can achieve asynchronous operations in JavaScript<br><br>
+- Because of Web API’s like `setTimeout` and callback functions, we can achieve asynchronous operations in JavaScript<br><br>
 
 ### Moving onto the event listeners
 - Let us go to the index.html where as of for now only “Namaste JavaScript” is printed
