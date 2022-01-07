@@ -22,6 +22,7 @@
     1. callback function
     2. time in milli seconds
 <br>
+
 - `setTimeout` will take that callback function and attach a timer of 5000ms to it and store it in a different space 
 -  We've seen in our previous lessons that JavaScript doesn't wait until `setTimeout` finishes its execution
 - In this case, as well JavaScript won't wait for the 5000ms timer to expire
