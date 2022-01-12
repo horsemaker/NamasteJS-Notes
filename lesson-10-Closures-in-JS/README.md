@@ -62,7 +62,7 @@
 - <img src="images/img2.PNG">
  
 - Here, the function `y()` has its lexical scope and the in the console statement the `a` refers to the *reference* and not the *value*. People get confused that the a will might refer the value 7 but it is `a`’s *reference* which will be returned. Value of `a` doesn't persist but the *reference* is what persists. Function remembers the reference to `a`’s memory location.
-- So when it will execute the function `z()` it loos for `a`’s reference which now points to the value 100
+- So when it will execute the function `z()` it looks for `a`’s reference which now points to the value 100
 - It means that the reference, the value 100 is still preserved in the memory because of the **closure** and when `x()` perished, it wasn’t garbage collected because it had to be used ahead. So that way the closure is giving us the value 100
 - Lets go one more step deep into the scope chain, what if this whole code is again wrapped within one more parent function.
 - What if we try to access the variable from one more level parent from the deepest function? 
